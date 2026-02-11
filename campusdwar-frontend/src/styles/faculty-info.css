@@ -1,0 +1,101 @@
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.faculty-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.faculty-image-container {
+  width: 100%;
+  height: 180px;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.faculty-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.faculty-card:hover .faculty-image {
+  transform: scale(1.05);
+}
+
+.faculty-details {
+  padding: 16px 20px 0;
+  text-align: center;
+}
+
+.faculty-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f4c81;
+  margin-bottom: 6px;
+}
+
+.faculty-dept {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.faculty-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+  border-top: 1px solid #eef2f6;
+  padding-top: 15px;
+}
+
+.contact-item {
+  font-size: 0.85rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  font-size: 1rem;
+}
+
+.page-header {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

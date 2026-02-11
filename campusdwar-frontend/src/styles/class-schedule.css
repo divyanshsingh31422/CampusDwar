@@ -1,0 +1,38 @@
+.schedule-content {
+  padding: 30px 40px;
+  width: 100%;
+  background: #f6f8fb;
+}
+
+.schedule-content h2 {
+  color: #0f4c81;
+  margin-bottom: 20px;
+}
+
+/* Uses SAME table-card pattern as Marks, Assignments */
+.table-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #0f4c81;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  font-size: 14px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}

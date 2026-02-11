@@ -1,0 +1,72 @@
+.faculty-content {
+  padding: 30px 40px;
+  width: 100%;
+  background: #f6f8fb;
+}
+
+.faculty-content h2 {
+  color: #0f4c81;
+  margin-bottom: 20px;
+}
+
+.attendance-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.attendance-filters {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.attendance-filters label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.attendance-filters select,
+.attendance-filters input {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background: #0f4c81;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  font-size: 14px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 14px;
+  width: 220px;
+  border-radius: 18px;
+  border: none;
+  background: #0f4c81;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}

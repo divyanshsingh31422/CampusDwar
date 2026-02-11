@@ -1,0 +1,74 @@
+.assignments-content {
+  padding: 30px 40px;
+  width: 100%;
+  background: #f6f8fb;
+}
+
+.assignments-content h2 {
+  color: #0f4c81;
+  margin-bottom: 20px;
+}
+
+.table-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #0f4c81;
+  color: white;
+}
+
+th, td {
+  padding: 14px;
+  font-size: 14px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.submitted {
+  background: #4caf50;
+  color: white;
+}
+
+.status.pending {
+  background: #ff9800;
+  color: white;
+}
+
+.status.late {
+  background: #f44336;
+  color: white;
+}
+
+.btn-view {
+  background: #0f4c81;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+}
+
+.btn-upload {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+}

@@ -1,0 +1,54 @@
+.marks-content {
+  padding: 30px 40px;
+  width: 100%;
+  background: #f6f8fb;
+}
+
+.marks-content h2 {
+  color: #0f4c81;
+  margin-bottom: 20px;
+}
+
+.table-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #0f4c81;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  font-size: 14px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.pass {
+  background: #4caf50;
+  color: white;
+}
+
+.status.fail {
+  background: #f44336;
+  color: white;
+}
