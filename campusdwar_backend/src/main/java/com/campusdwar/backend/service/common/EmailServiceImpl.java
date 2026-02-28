@@ -26,7 +26,6 @@ public class EmailServiceImpl implements EmailService {
 
             mailSender.send(message);
         } catch (Exception e) {
-            // 🔒 MOST IMPORTANT LINE
             System.out.println("EMAIL FAILED (ignored): " + e.getMessage());
         }
     }

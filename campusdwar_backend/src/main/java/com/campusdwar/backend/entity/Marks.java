@@ -17,7 +17,7 @@ public class Marks {
     @JsonIgnore   // ✅ keep ignored to avoid recursion
     private Student student;
 
-    @ManyToOne(fetch = FetchType.EAGER)   // 🔥 MUST BE EAGER
+    @ManyToOne(fetch = FetchType.EAGER)   // MUST BE EAGER
     @JoinColumn(name = "subject_id", nullable = false)
     private Subject subject;
 

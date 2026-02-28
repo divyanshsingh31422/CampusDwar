@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    // =========================
+
     // Validation Errors (400)
-    // =========================
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidationErrors(
             MethodArgumentNotValidException ex) {
@@ -29,9 +29,9 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
-    // =========================
+
     // Illegal Arguments (400)
-    // =========================
+
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<String> handleBadRequest(IllegalArgumentException ex) {
         return ResponseEntity
@@ -39,17 +39,17 @@ public class GlobalExceptionHandler {
                 .body(ex.getMessage());
     }
 
-    // =========================
+
     // Resource Not Found (404)
-    // =========================
+ 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<String> handleNotFound(ResourceNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
-    // =========================
+ 
     // Generic Exception (500)
-    // =========================
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleGeneric(Exception ex) {
         return new ResponseEntity<>(

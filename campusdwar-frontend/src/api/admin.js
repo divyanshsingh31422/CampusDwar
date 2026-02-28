@@ -28,7 +28,7 @@ export const deleteSubject = (id) => API.delete(`/admin/subjects/${id}`);
 // export const getAllNotifications = () =>
 //   API.get("/admin/notifications");
 
-/* ================= NOTIFICATIONS ================= */
+/*NOTIFICATIONS */
 
 export const sendBroadcastNotification = (data) =>
   API.post("/admin/notifications", data);

@@ -1,72 +1,3 @@
-// import StudentSidebar from "../../components/sidebar/StudentSidebar";
-// import "../../styles/attendance.css";
-
-// const Attendance = () => {
-//   return (
-//     <div className="dashboard">
-//       <StudentSidebar />
-
-//       <div className="attendance-content">
-//         <input
-//           type="text"
-//           className="search-input"
-//           placeholder="Search module..."
-//         />
-
-//         <div className="attendance-card">
-//           <h3>Theory Attendance (Module-wise)</h3>
-
-//           <div className="chart-container">
-//             <div className="bar" style={{ height: "92%" }}>
-//               <span>92%</span>
-//               <label>C++</label>
-//             </div>
-//             <div className="bar" style={{ height: "88%" }}>
-//               <span>88%</span>
-//               <label>JAVA</label>
-//             </div>
-//             <div className="bar" style={{ height: "90%" }}>
-//               <span>90%</span>
-//               <label>Database</label>
-//             </div>
-//             <div className="bar" style={{ height: "85%" }}>
-//               <span>85%</span>
-//               <label>OS</label>
-//             </div>
-//             <div className="bar" style={{ height: "94%" }}>
-//               <span>94%</span>
-//               <label>WPT</label>
-//             </div>
-//             <div className="bar" style={{ height: "89%" }}>
-//               <span>89%</span>
-//               <label>Web Java</label>
-//             </div>
-//             <div className="bar" style={{ height: "91%" }}>
-//               <span>91%</span>
-//               <label>DSA</label>
-//             </div>
-//             <div className="bar" style={{ height: "87%" }}>
-//               <span>87%</span>
-//               <label>.NET</label>
-//             </div>
-//             <div className="bar" style={{ height: "96%" }}>
-//               <span>96%</span>
-//               <label>Aptitude</label>
-//             </div>
-//             <div className="bar" style={{ height: "93%" }}>
-//               <span>93%</span>
-//               <label>English</label>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Attendance;
-
-
 import { useEffect, useMemo, useState } from "react";
 
 import { getMyAttendance } from "../../api/student";
@@ -103,9 +34,9 @@ const Attendance = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  /* =========================
+  /* 
      SUBJECT LIST (DROPDOWN)
-     ========================= */
+*/
   const subjects = useMemo(() => {
     const map = new Map();
     attendance.forEach((a) => {
@@ -116,9 +47,9 @@ const Attendance = () => {
     return Array.from(map, ([id, name]) => ({ id, name }));
   }, [attendance]);
 
-  /* =========================
+  /* 
      FILTER BY SUBJECT
-     ========================= */
+   */
   const filteredAttendance = useMemo(() => {
     if (selectedSubject === "ALL") return attendance;
     return attendance.filter(
@@ -126,9 +57,9 @@ const Attendance = () => {
     );
   }, [attendance, selectedSubject]);
 
-  /* =========================
+  /* 
      BAR GRAPH DATA
-     ========================= */
+   */
   const chartData = useMemo(() => {
     const map = {};
 
@@ -171,9 +102,9 @@ const Attendance = () => {
       <div className="attendance-content">
         <h2>Attendance</h2>
 
-        {/* =========================
+        {/*
             SUBJECT DROPDOWN
-           ========================= */}
+           */}
         <div style={{ marginBottom: "15px" }}>
           <label>
             <strong>Select Subject:</strong>
@@ -191,9 +122,9 @@ const Attendance = () => {
           </select>
         </div>
 
-        {/* =========================
+        {/* 
             BAR GRAPH
-           ========================= */}
+          */}
 <div className="chart-card">
   <h3>Subject-wise Attendance (%)</h3>
 
@@ -253,9 +184,9 @@ const Attendance = () => {
 
 
 
-        {/* =========================
+        {/* 
             ATTENDANCE TABLE
-           ========================= */}
+           */}
         <div className="table-card">
           <table>
             <thead>

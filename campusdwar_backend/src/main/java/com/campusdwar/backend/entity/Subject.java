@@ -20,7 +20,7 @@ public class Subject {
 
     @ManyToOne
     @JoinColumn(name = "faculty_id")
-    @JsonIgnore   // ✅ keep ignore to prevent deep loop
+    @JsonIgnore   //  keep ignore to prevent deep loop
     private Faculty faculty;
 
 	public Long getSubjectId() {

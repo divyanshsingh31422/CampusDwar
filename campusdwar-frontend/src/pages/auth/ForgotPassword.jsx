@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { sendOtp, resetPassword } from "../../api/auth";
-import "../../styles/forgot-password.css"; // ✅ add css
+import "../../styles/forgot-password.css"; // add css
 
 const ForgotPassword = () => {
   const [step, setStep] = useState(1);

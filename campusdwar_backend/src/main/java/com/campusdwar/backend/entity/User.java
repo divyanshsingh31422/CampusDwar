@@ -29,9 +29,9 @@ public class User {
     @Column(name = "active")
     private Boolean active = true;
 
-    // =========================
+
     // RELATIONSHIPS
-    // =========================
+
 
     @OneToOne(mappedBy = "user")
     @JsonIgnore
@@ -41,16 +41,16 @@ public class User {
     @JsonIgnore
     private Faculty faculty;
 
-    // =========================
+
     // CONSTRUCTORS
-    // =========================
+
 
     public User() {
     }
 
-    // =========================
+
     // GETTERS & SETTERS
-    // =========================
+
 
     public Long getUserId() {
         return userId;

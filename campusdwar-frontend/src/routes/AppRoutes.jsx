@@ -41,12 +41,12 @@ import FacultyNotifications from "../pages/faculty/Notifications";
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* ================= AUTH ================= */}
+      {/* AUTH */}
       <Route path="/" element={<Login />} />
       <Route path="/login" element={<Login />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
 
-      {/* ================= STUDENT ================= */}
+      {/*STUDENT*/}
       <Route path="/student" element={<StudentLayout />}>
         {/* default page → Account Info */}
         <Route index element={<AccountInfo />} />
@@ -63,7 +63,7 @@ const AppRoutes = () => {
         <Route path="feedback" element={<Feedback />} />
       </Route>
 
-      {/* ================= FACULTY ================= */}
+      {/* FACULTY */}
       <Route path="/faculty" element={<FacultyLayout />}>
         <Route index element={<FacultyProfile />} />
         <Route path="profile" element={<FacultyProfile />} />

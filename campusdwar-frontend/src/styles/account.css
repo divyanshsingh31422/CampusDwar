@@ -1,6 +1,6 @@
-/* =========================
+/*
    ACCOUNT / PROFILE CONTENT
-========================= */
+*/
 .account-content {
   padding: 30px 40px;
   width: 100%;
@@ -14,9 +14,9 @@
   font-weight: 600;
 }
 
-/* =========================
+/* 
    INFO BOX (CARD)
-========================= */
+ */
 .info-box {
   background: #ffffff;
   border-radius: 18px;
@@ -33,18 +33,18 @@
   font-weight: 600;
 }
 
-/* =========================
+/*
    GRID LAYOUT
-========================= */
+*/
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 18px 25px;
 }
 
-/* =========================
+/*
    FIELD
-========================= */
+*/
 .info-field {
   display: flex;
   flex-direction: column;
@@ -67,16 +67,16 @@
   outline: none;
 }
 
-/* =========================
+/*
    READ-ONLY FEEL
-========================= */
+*/
 .info-field input:read-only {
   cursor: default;
 }
 
-/* =========================
+/*
    RESPONSIVE
-========================= */
+*/
 @media (max-width: 768px) {
   .account-content {
     padding: 20px;

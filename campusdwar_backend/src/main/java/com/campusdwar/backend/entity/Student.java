@@ -17,7 +17,7 @@ public class Student {
     @JsonIgnore
     private User user;
 
-    /* ================= BASIC DETAILS ================= */
+    /*  BASIC DETAILS  */
 
     @Column(nullable = false)
     private String name;
