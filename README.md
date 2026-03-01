@@ -2,97 +2,170 @@ CampusDwar
 📚 Description
 The College ERP System is a comprehensive management tool designed to streamline and automate academic and administrative processes in colleges. It provides distinct roles for HODs (Heads of Departments), Professors, and Students, each with specific functionalities. The system is built using modern technologies with a robust backend and an interactive frontend, ensuring efficiency and user-friendliness.
 
-🌟 Features
-Frontend
-Dynamic UI using React and TailwindCSS for a responsive and modern design.
-Routing enabled by React Router for seamless navigation.
-State Management using Redux to handle complex data interactions.
-Charts and Analytics with ApexChart for visualization of academic and attendance data.
-API Integration using Axios for smooth communication between frontend and backend.
-Backend
-Role-Based Access Control:
-HOD: Full CRUD operations on Students, Professors, Subjects, Departments, Semesters, Notifications, and Class records.
-Professor: Limited CRUD operations for student records, attendance, and notifications.
-Student: Ability to view personal details, update personal information, and receive notifications.
-MySQL Database: Efficient handling of numerical and relational data through MySQL Workbench.
-Google Firebase:
-Storage for student images.
-Authentication for secure access.
-Notification System: Personalized notifications for students and professors.
-Email Integration: Flexible email services for bulk or individual messaging with attachments.
-Attendance Tracking: Professors can save and retrieve attendance records.
-Subject & Practical Management: CRUD operations for subjects, semesters, and practicals.
-🛠️ Tech Stack
-Frontend
-React
-React Router
-Redux
-Vite
-TailwindCSS
-Axios
-ApexCharts
-Backend
-Java Spring Boot
-Google Firebase
-MySQL
-🚀 How to Use
-Roles and Functionalities
-HOD
+“CampusDwar is a three-tier web application with React on the frontend, Spring Boot on the backend, and MySQL as the database.
+The frontend is a Single Page Application that uses React Router, Redux for state, and Axios for API calls. The backend is a REST API built using Spring Boot with role-based access control. All data is stored in MySQL, while media files are stored in Firebase.
+The architecture follows clean separation: UI at frontend, business logic at backend, and persistence in database + cloud storage.”
 
-Manage Students, Professors, and Departments.
-Handle CRUD operations for Subjects, Semesters, and Class Records.
-Send bulk notifications and emails to faculty and students.
-Professor
+                  ┌───────────────────────────┐
+                  │       Browser / Client    │
+                  │ (React UI + Redux Store)  │
+                  └───────────────┬───────────┘
+                                  ↓
+           ┌─────────────────────────────────────────┐
+           │             Frontend Layer              │
+           │ (React.js + TailwindCSS + Axios API)    │
+           └─────────────────────────────────────────┘
+                                  ↓
+           ┌─────────────────────────────────────────┐
+           │           Backend Layer (API)           │
+           │     Spring Boot REST Services           │
+           │     Role Based Access Control (RBAC)    │
+           └─────────────────────────────────────────┘
+                                  ↓
+           ┌─────────────────────────────┬───────────┐
+           │      Database Layer         │  Firebase │
+           │       MySQL (Relational)    │  Storage  │
+           │      CRUD & Queries         │  & Image  │
+           └─────────────────────────────┴───────────┘
+===================== MAIN ENTITIES (Tables) =======================
+Users
+Roles
+Students
+Faculty
+Subject
+Assignments
+Submissions
+Marks
+Feedback
+Leaves
+Documents
+Notifications
+Password_Reset
+========================== ER Diagram ======================
+<img width="1007" height="1342" alt="erDiagram" src="https://github.com/user-attachments/assets/6cba9440-9dd2-44b2-9ffd-3dc0ccff7f50" />
 
-Add or update attendance records.
-Send notifications to students.
-View and manage student records.
-Student
+ROLES (role_id)
+      |
+      | 1
+      |------< N
+USERS (user_id, role_id)
+      |
+      | 1
+      |------< 1
+STUDENTS (student_id, user_id)
 
-Update personal details.
-View notifications and attendance records.
-📋 Setup Instructions
-Prerequisites
-Ensure the following are installed on your system:
+USERS
+      |
+      | 1
+      |------< 1
+FACULTY (faculty_id, user_id)
 
-Node.js (v14 or above)
-Java JDK (v11 or above)
-MySQL Workbench
-Firebase account for storage and authentication
-Frontend Setup
-Clone the repository:
-git clone <repository-url>  
-cd frontend  
-Install dependencies:
-npm install  
-Start the development server:
-npm run dev  
-Access the application at http://localhost:3000.
-Backend Setup
-Clone the repository:
+FACULTY
+      |
+      | 1
+      |------< N
+SUBJECT (subject_id, faculty_id)
 
-git clone <repository-url>  
-cd backend  
-Configure the application properties:
+SUBJECT
+      |
+      | 1
+      |------< N
+ASSIGNMENTS (assignment_id, subject_id)
 
-Update application.properties with your MySQL and Firebase credentials.
-Build the project:
+ASSIGNMENTS
+      |
+      | 1
+      |------< N
+SUBMISSIONS (submission_id, assignment_id, student_id)
 
-./mvnw clean install  
-Run the server:
+STUDENTS
+      |
+      | 1
+      |------< N
+MARKS (marks_id, student_id, subject_id)
 
-./mvnw spring-boot:run  
-Database Setup
-Create a database in MySQL Workbench:
-CREATE DATABASE college_erp;  
-Update the database credentials in application.properties.
-The tables will be created automatically using JPA when you run the backend.
-Firebase Setup
-Create a Firebase project.
-Enable Firestore and Storage.
-Download the Firebase configuration file and place it in the backend project.
-💡 Contribution
-Feel free to fork this repository and submit pull requests for new features or bug fixes. Contributions are always welcome!
+STUDENTS
+      |
+      | 1
+      |------< N
+FEEDBACK (feedback_id, student_id, faculty_id)
 
-📧 Contact
-For queries or support, contact [divyanshSingh@gmail.com].
+USERS
+      |
+      | 1
+      |------< N
+LEAVES (leave_id, user_id)
+
+USERS
+      |
+      | 1
+      |------< N
+DOCUMENTS (document_id, user_id)
+
+USERS
+      |
+      | 1
+      |------< N
+NOTIFICATIONS (notification_id, user_id)
+
+===================================================================================================
+Project Flow – College Management System
+
+1️⃣ User Authentication
+User registers in the system.
+Admin assigns a role (Admin / Faculty / Student).
+User logs in.
+Role-based dashboard is displayed.
+
+2️⃣ Admin Flow
+Admin creates student and faculty accounts.
+Admin assigns roles.
+Admin manages subjects.
+Admin monitors overall system activities.
+
+3️⃣ Faculty Flow
+Faculty logs in.
+Creates subjects.
+Uploads assignments for students.
+Reviews student submissions.
+Assigns marks and provides feedback.
+Sends notifications if required.
+
+4️⃣ Student Flow
+Student logs in.
+Views enrolled subjects.
+Downloads assignments.
+Uploads assignment submissions.
+Views marks and feedback.
+
+5️⃣ Assignment Workflow (End-to-End)
+Faculty creates assignment
+→ Student submits assignment
+→ Faculty evaluates
+→ Marks stored in database
+→ Student views result
+
+6️⃣ Leave Management Flow
+User applies for leave
+→ Admin reviews request
+→ Approves or rejects
+→ Status updated in system
+
+7️⃣ Document Management
+User uploads documents
+→ Stored securely in database
+→ Accessible when required
+
+8️⃣ Password Reset Flow
+User requests password reset
+→ OTP sent
+→ User verifies OTP
+→ Password updated
+
+============================================================================================================
+                                          Role-based (Login)
+<img width="829" height="567" alt="image" src="https://github.com/user-attachments/assets/88d45d75-f980-4327-9a85-7c53f68490eb" />
+
+
+
+
