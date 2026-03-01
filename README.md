@@ -1,3 +1,5 @@
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ace4012f-d29b-49da-bd53-bb00ae05fd35" />
+
 CampusDwar
 📚 Description
 The College ERP System is a comprehensive management tool designed to streamline and automate academic and administrative processes in colleges. It provides distinct roles for HODs (Heads of Departments), Professors, and Students, each with specific functionalities. The system is built using modern technologies with a robust backend and an interactive frontend, ensuring efficiency and user-friendliness.
@@ -110,7 +112,7 @@ USERS
       |------< N
 NOTIFICATIONS (notification_id, user_id)
 
-===================================================================================================
+============================================================
 Project Flow – College Management System
 
 1️⃣ User Authentication
@@ -164,9 +166,17 @@ User requests password reset
 → User verifies OTP
 → Password updated
 
-============================================================================================================
-                                          Role-based (Login)
+========================Role-based (Login)========================
 <img width="829" height="567" alt="image" src="https://github.com/user-attachments/assets/88d45d75-f980-4327-9a85-7c53f68490eb" />
+Admin Dashboard
+<img width="1536" height="1024" alt="admin dashboard" src="https://github.com/user-attachments/assets/52c557cc-23e6-4b9d-a6b2-b3c678fa2408" />
+Faculty Dashboard
+<img width="1536" height="1024" alt="faculty dashboard" src="https://github.com/user-attachments/assets/47301953-1f0c-46cd-8343-667267cbcaeb" />
+Student Dashboard
+<img width="1536" height="1024" alt="student dashboard" src="https://github.com/user-attachments/assets/4eb72782-d1cd-4333-9245-e08766f5b6e6" />
+
+<img width="1536" height="1024" alt="Assignment" src="https://github.com/user-attachments/assets/7f751834-9737-4058-a0e4-d35967ebfb50" />
+
 
 
 
