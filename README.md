@@ -112,8 +112,7 @@ USERS
       |------< N
 NOTIFICATIONS (notification_id, user_id)
 
-============================================================
-Project Flow – College Management System
+===================Project Flow – College Management System=============
 
 1️⃣ User Authentication
 User registers in the system.
