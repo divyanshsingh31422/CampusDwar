@@ -28,6 +28,7 @@ The architecture follows clean separation: UI at frontend, business logic at bac
            │      CRUD & Queries         │  & Image  │
            └─────────────────────────────┴───────────┘
 ===================== MAIN ENTITIES (Tables) =======================
+
 Users
 Roles
 Students
@@ -41,6 +42,7 @@ Leaves
 Documents
 Notifications
 Password_Reset
+
 ========================== ER Diagram ======================
 <img width="1007" height="1342" alt="erDiagram" src="https://github.com/user-attachments/assets/6cba9440-9dd2-44b2-9ffd-3dc0ccff7f50" />
 
