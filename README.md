@@ -1,4 +1,3 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ace4012f-d29b-49da-bd53-bb00ae05fd35" />
 
 CampusDwar
 📚 Description
