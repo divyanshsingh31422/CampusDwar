@@ -30,18 +30,18 @@ The architecture follows clean separation: UI at frontend, business logic at bac
            └─────────────────────────────┴───────────┘
 ===================== MAIN ENTITIES (Tables) =======================
 
-Users
-Roles
-Students
-Faculty
-Subject
-Assignments
-Submissions
-Marks
-Feedback
-Leaves
-Documents
-Notifications
+Users,
+Roles,
+Students,
+Faculty,
+Subject,
+Assignments,
+Submissions,
+Marks,
+Feedback,
+Leaves,
+Documents,
+Notifications,
 Password_Reset
 
 ========================== ER Diagram ======================
